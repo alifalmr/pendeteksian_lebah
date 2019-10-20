@@ -1,6 +1,6 @@
 <?php 
 // koneksi ke database
-$conn = mysqli_connect('localhost','pi','linggarestu123','mydb');
+$conn = mysqli_connect('localhost','root','root','beecounter');
 
 function query($query) {
 	global $conn;

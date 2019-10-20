@@ -1,6 +1,6 @@
 body {
   font-size: .875rem;
-  background-color: #E4EBF3;
+  background-color: #CFECE8;
 }
 
 .feather {
@@ -10,7 +10,7 @@ body {
 
 /* navbar */
 .navbar-custom {
-  background-color: rgb(60, 80, 100); }
+  background-color: #16A086; }
 
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -50,7 +50,7 @@ body {
   padding: 48px 0 0;
   /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-  background-color: #617891; }
+  background-color: #47B29E; }
 
 .sidebar-sticky {
   position: relative;
@@ -97,7 +97,7 @@ body {
     /* Space for fixed navbar */ } }
 
 .main {
-  background-color: #E4EBF3;
+  background-color: #CFECE8;
 }
 
 .fa-lg {
@@ -111,7 +111,7 @@ body {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #107A66;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25); }
 
 .navbar .form-control {
@@ -132,50 +132,24 @@ body {
   background-color: #fff;
   height: 110px;
   margin-right: 60px;
+  margin-bottom: 30px;
   padding-top: 10px;
+  padding-left: 30px;
   -webkit-box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
   -moz-box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
   box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
 }
 
-.card-sensor {
-  background-color: #fff;
-  height: 90px;
-  margin-right: 60px;
-  margin-top : 20px; 
-  margin-left : -30px;
-  padding-top: 10px;
-  -webkit-box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
-  -moz-box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
-  box-shadow: 0px 0px 26px -1px rgba(212,205,212,1);
+.total h4{
+  margin-top : 25px;
+}
+
+.total p{
+  font-size: 20pt;
 }
 
 .icon-sensor {
   font-size: 40px;
-}
-
-#kotak-merah {
-  background-color: rgb(216, 34, 34);
-  height: 60px;
-  margin-top: 7.5px;
-}
-
-#kotak-hijau {
-  background-color: rgb(32, 196, 95);
-  height: 60px;
-  margin-top: 7.5px;
-}
-
-#kotak-biru {
-  background-color: rgb(31, 119, 192);
-  height: 60px;
-  margin-top: 7.5px;
-}
-
-#kotak-kuning {
-  background-color: rgb(242, 245, 48);
-  height: 60px;
-  margin-top: 7.5px;
 }
 
 .tabel {

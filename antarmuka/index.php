@@ -1,20 +1,28 @@
 <?php 
 require 'functions.php';
 
-$lebah = query("SELECT * FROM koloni2");
-$sensor = query("SELECT * FROM sensor ORDER BY id DESC LIMIT 1;");
+$lebah = query("SELECT * FROM data_inout ORDER BY id DESC LIMIT 20");
 
-$lebahMerahMasuk = query("SELECT * FROM koloni2 WHERE warna_lebah = 'merah' AND status = 'masuk'");
-$lebahMerahKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'merah' AND status = 'keluar'");
+$lebahMasukEntrance1 = query("SELECT * FROM data_inout WHERE entrance = 'satu' AND status = 'masuk'");
+$lebahKeluarEntrance1 = query("SELECT * FROM data_inout WHERE entrance = 'satu' AND status = 'keluar'");
 
-$lebahHijauMasuk = query("SELECT * FROM koloni2 WHERE warna_lebah = 'hijau' AND status = 'masuk'");
-$lebahHijauKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'hijau' AND status = 'keluar'");
+$lebahMasukEntrance2 = query("SELECT * FROM data_inout WHERE entrance = 'dua' AND status = 'masuk'");
+$lebahKeluarEntrance2 = query("SELECT * FROM data_inout WHERE entrance = 'dua' AND status = 'keluar'");
 
-$lebahBiruMasuk = query("SELECT * FROM koloni2 WHERE warna_lebah = 'biru' AND status = 'masuk'");
-$lebahBiruKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'biru' AND status = 'keluar'");
+$lebahMasukEntrance3 = query("SELECT * FROM data_inout WHERE entrance = 'tiga' AND status = 'masuk'");
+$lebahKeluarEntrance3 = query("SELECT * FROM data_inout WHERE entrance = 'tiga' AND status = 'keluar'");
 
-$lebahKuningMasuk = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' AND status = 'masuk'");
-$lebahKuningKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' AND status = 'keluar'");
+$lebahMasukEntrance4 = query("SELECT * FROM data_inout WHERE entrance = 'empat' AND status = 'masuk'");
+$lebahKeluarEntrance4 = query("SELECT * FROM data_inout WHERE entrance = 'empat' AND status = 'keluar'");
+
+$lebahMasukEntrance5 = query("SELECT * FROM data_inout WHERE entrance = 'lima' AND status = 'masuk'");
+$lebahKeluarEntrance5 = query("SELECT * FROM data_inout WHERE entrance = 'lima' AND status = 'keluar'");
+
+$lebahMasukEntrance6 = query("SELECT * FROM data_inout WHERE entrance = 'enam' AND status = 'masuk'");
+$lebahKeluarEntrance6 = query("SELECT * FROM data_inout WHERE entrance = 'enam' AND status = 'keluar'");
+
+$totalMasuk = count($lebahMasukEntrance1) + count($lebahMasukEntrance2) + count($lebahMasukEntrance3) + count($lebahMasukEntrance4) + count($lebahMasukEntrance5) + count($lebahMasukEntrance6);
+$totalKeluar = count($lebahKeluarEntrance1) + count($lebahKeluarEntrance2) + count($lebahKeluarEntrance3) + count($lebahKeluarEntrance4) + count($lebahKeluarEntrance5) + count($lebahKeluarEntrance6);
 
 // var_dump($sensor);
 ?>
@@ -42,7 +50,7 @@ $lebahKuningKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' A
           <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bee Counter</a>
           <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-              <a class="nav-link" href="#">Angga Nurhiman</a>
+              <a class="nav-link" href="#">Alifa Almira</a>
             </li>
           </ul>
         </nav>
@@ -76,95 +84,74 @@ $lebahKuningKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' A
               <div class="container">
                 <div class="row">
 
-                  <!-- lebah warna merah -->
+                  <!-- entrance 1 -->
                   <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div id="kotak-merah"></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Lebah Merah</h6>
-                          <p>In : <?= count($lebahMerahMasuk)?> <br> Out : <?= count($lebahMerahKeluar)?></p>
+                      <div>
+                          <h6>Entrance 1</h6>
+                          <p>In : <?= count($lebahMasukEntrance1)?> <br> Out : <?= count($lebahKeluarEntrance1)?></p>
                       </div>
                     </div>                
                   </div>
                   
-                  <!-- lebah warna hijau -->
+                  <!-- entrance 2 -->
                   <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div id="kotak-hijau"></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Lebah Hijau</h6>
-                          <p>In : <?= count($lebahHijauMasuk)?> <br> Out : <?= count($lebahHijauKeluar)?></p>
+                      <div>
+                          <h6>Entrance 2</h6>
+                          <p>In : <?= count($lebahMasukEntrance2)?> <br> Out : <?= count($lebahKeluarEntrance2)?></p>
                       </div>
                     </div>                
                   </div>
 
-                  <!-- lebah warna biru -->
+                  <!-- entrance 3 -->
                   <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div id="kotak-biru"></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Lebah Biru</h6>
-                          <p>In : <?= count($lebahBiruMasuk)?> <br> Out : <?= count($lebahBiruKeluar)?></p>
+                      <div>
+                          <h6>Entrance 3</h6>
+                          <p>In : <?= count($lebahMasukEntrance3)?> <br> Out : <?= count($lebahKeluarEntrance3)?></p>
                       </div>
                     </div>                
                   </div>
 
-                  <!-- lebah warna kuning -->
+                  <!-- entrance 4 -->
                   <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div id="kotak-kuning"></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Lebah Kuning</h6>
-                          <p>In : <?= count($lebahKuningMasuk)?> <br> Out : <?= count($lebahKuningKeluar)?></p>
+                      <div>
+                          <h6>Entrance 4</h6>
+                          <p>In : <?= count($lebahMasukEntrance4)?> <br> Out : <?= count($lebahKeluarEntrance4)?></p>
                       </div>
                     </div>                
                   </div>
 
-                  <div class="col-md-2"></div>
-
-                  <!-- sensor suhu -->
-                  <div class="col-md-2 card-sensor">
+                  <!-- entrance 5 -->
+                  <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div class="icon-sensor"><i class="fas fa-temperature-low"></i></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Suhu</h6>
-                          <p><?= $sensor[0]["suhu"]; ?> &deg;C</p>
-                      </div>
-                    </div>                 
-                  </div>
-                  
-                  <!-- sensor kelembaban -->
-                  <div class="col-md-2 card-sensor">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="icon-sensor"><i class="fas fa-tint"></i></div>
-                      </div>
-                      <div class="col-md-8">
-                          <h6>Kelembaban</h6>
-                          <p><?= $sensor[0]["kelembaban"]; ?>%</p>
+                      <div>
+                          <h6>Entrance 5</h6>
+                          <p>In : <?= count($lebahMasukEntrance5)?> <br> Out : <?= count($lebahKeluarEntrance5)?></p>
                       </div>
                     </div>                
                   </div>
 
-                  <!-- sensor intensitas cahaya -->
-                  <div class="col-md-2 card-sensor">
+                  <!-- entrance 6 -->
+                  <div class="col-md-2 card">
                     <div class="row">
-                      <div class="col-md-4">
-                        <div class="icon-sensor"><i class="far fa-sun"></i></div>
+                      <div>
+                          <h6>Entrance 6</h6>
+                          <p>In : <?= count($lebahMasukEntrance6)?> <br> Out : <?= count($lebahKeluarEntrance6)?></p>
                       </div>
-                      <div class="col-md-8">
-                          <h6>Intensitas Cahaya</h6>
-                          <p><?= $sensor[0]["intensitas_cahaya"]; ?> Lux</p>
+                    </div>                
+                  </div>
+
+                  <!-- total -->
+                  <div class="col-md-5 card">
+                    <div class="row">
+                      <div class="col-md-4 total">
+                          <h4><b>TOTAL</b></h4>
+                      </div>
+                      <div class="col-md-8 total">
+                          <p>In : <?= $totalMasuk?> <br> Out : <?= $totalKeluar?></p>
                       </div>
                     </div>                
                   </div>
@@ -178,7 +165,7 @@ $lebahKuningKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' A
                     <thead>
                       <tr>
                         <th>No.</th>
-                        <th>Warna Lebah</th>
+                        <th>Entrance</th>
                         <th>Status</th>
                         <th>Waktu</th>
                       </tr>
@@ -188,7 +175,7 @@ $lebahKuningKeluar = query("SELECT * FROM koloni2 WHERE warna_lebah = 'kuning' A
                     <?php foreach ($lebah as $row) :?>
                       <tr>
                         <td><?= $i++; ?></td>
-                        <td><?= $row["warna_lebah"]; ?></td>
+                        <td><?= $row["entrance"]; ?></td>
                         <td><?= $row["status"]; ?></td>
                         <td><?= $row["waktu"]; ?></td>
                       </tr>
